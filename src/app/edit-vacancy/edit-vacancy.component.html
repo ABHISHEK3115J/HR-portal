@@ -1,0 +1,26 @@
+<div>
+    <h3>Job Title</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="vacancy.JobTitle" size="30" pInputText required >
+    <label for="float-input">Job Title</label>
+</span>
+<h3>Job Role</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="vacancy.JobRole" size="30" pInputText required> 
+    <label for="float-input">Job Role</label>
+</span>
+<h3>District</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" [(ngModel)]="vacancy.District" pInputText required> 
+    <label for="float-input">District</label>
+</span>
+<h3 class="first">Vacancies</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="number" size="30" [(ngModel)]="vacancy.Vacancy" pInputText required> 
+    <label for="float-input">Vacancies</label>
+</span>
+
+    <button pButton type="button" label="update" icon="pi pi-check" style="margin-right: .25em" (click)="updateVacancy()"></button>
+    <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancelVacancy()"></button>
+
+</div>

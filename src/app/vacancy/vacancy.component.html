@@ -1,0 +1,20 @@
+
+<app-menu></app-menu>
+Search: <input id="input" type="text" size="30" pInputText [(ngModel)]="listFilterBy">
+<button *ngIf="user.isAdmin | async" pButton type="button" label="Add New" style="margin-right: .25em" (click)="addVacancy()"></button>
+<br/><br/>
+
+  <div class="row">
+    <div class="column">
+  <div *ngFor='let vacancy of filteredList' class="card">
+      <div class="first-col">{{vacancy.JobRole}}</div>
+  <div class="second-col">{{vacancy.JobTitle}}</div>
+  <div class="third-col">{{vacancy.District}}</div>
+  <div class="fourth-col">{{vacancy.Vacancy}}</div>  
+  <button pButton *ngIf="user.isAdmin | async" type="button" id="{{vacancy.id}}" label="Edit" icon="pi pi-check" style="margin-right: .25em" (click)="editVacancy(vacancy)"></button>
+  <button pButton *ngIf="user.isAdmin | async" type="button" id="{{vacancy.id}}" label="Delete" icon="pi pi-times" class="ui-button-secondary" (click)="deleteVacancy(vacancy)"></button>
+</div>
+
+    </div>
+  </div>
+

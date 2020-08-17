@@ -1,0 +1,26 @@
+<div>
+    <h3>Project Name</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="text" [(ngModel)]="project.Projectname" size="30" pInputText required >
+    <label for="float-input">Project Name</label>
+</span>
+<h3>Employee Assigned</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="number" [(ngModel)]="project.EmployeesAssigned" size="30" pInputText required> 
+    <label for="float-input">Employee Assigned</label>
+</span>
+<h3>Employee required</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="number" size="30" [(ngModel)]="project.EmployeesRequired" pInputText required> 
+    <label for="float-input">Employee required</label>
+</span>
+<h3 class="first">Total Employees</h3>
+<span class="ui-float-label">
+    <input id="float-input" type="number" size="30" [(ngModel)]="project.TotalEmployees" pInputText required> 
+    <label for="float-input">Total Employees</label>
+</span>
+
+    <button pButton type="button" label="update" icon="pi pi-check" style="margin-right: .25em" (click)="updateProject()"></button>
+    <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancelProject()"></button>
+
+</div>

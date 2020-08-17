@@ -1,0 +1,36 @@
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(22, 117, 196);
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(22, 117, 196);
+}
+
+.button {
+  padding: 20px;
+  color: white;
+  font-size: 30px;
+  border-radius: 10px;
+  background: rgb(22, 117, 196);
+  border: 1px solid black;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}

@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+Search: <input id="input" type="text" size="30" pInputText [(ngModel)]="listFilterBy">
+<button pButton *ngIf="user.isAdmin | async" type="button" label="Add New" style="margin-right: .25em" (click)="addEmployee()"></button>
+<br/><br/>
+<p-panel header="Employee Management System">
+  <div class="row">
+    <div class="column">
+  <div *ngFor='let employee of filteredList' class="card">
+      <app-employeedetail [employee]='employee' (refreshEmployeeList)="refreshList()">
+        </app-employeedetail>
+  </div>
+    </div>
+  </div>
+</p-panel>
